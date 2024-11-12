@@ -22,9 +22,27 @@
   font-style: normal;
 }
 
+html {
+  height: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;
+}
+
 header {
   display: flex;
   flex-direction: column;
+
+  padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem);
+
+  padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
+    clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
 
   & nav {
     display: flex;
@@ -60,5 +78,12 @@ header {
 
   #hamburger {
     display: none;
+  }
+
+  header {
+    padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
+      clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
+
+    padding-block-end: clamp(4rem, calc(3.786rem + 0.446vw), 4.188rem);
   }
 }
