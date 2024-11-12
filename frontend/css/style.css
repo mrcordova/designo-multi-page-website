@@ -46,6 +46,59 @@ header {
   }
 }
 
+.hero-section {
+  background-color: var(--peach);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(../assets/home/desktop/bg-pattern-hero-home.svg);
+  background-repeat: no-repeat;
+
+  max-height: 52.6875rem;
+  overflow: hidden;
+
+  & .hero-text {
+    padding-inline: clamp(1.5rem, calc(-0.528rem + 8.651vw), 3.625rem);
+    padding-block-start: clamp(3.75rem, calc(6.193rem + -5.089vw), 5rem);
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+    & h1 {
+      font-size: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
+      line-height: 1.125;
+    }
+
+    & p {
+      font-size: clamp(0.938rem, calc(0.878rem + 0.254vw), 1rem);
+      line-height: 1.66;
+    }
+
+    & button {
+      margin-block-start: 0.625rem;
+      text-transform: uppercase;
+      font-size: 0.938rem;
+      line-height: 1.46;
+      background-color: var(--white);
+      color: var(--dark-grey);
+      letter-spacing: 0.0625rem;
+      padding-inline: 1.5rem 1.568rem;
+      padding-block: 1.125rem 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  & img {
+    width: 35.8125rem;
+
+    margin-inline: -6.5rem;
+    max-width: none;
+
+    margin-block-start: -4.5rem;
+  }
+}
+
 #desktop-menu {
   display: none;
 }
@@ -110,6 +163,18 @@ header {
     display: none;
   }
 
+  .hero-section {
+    & .hero-text {
+      & h1 {
+        line-height: 1;
+      }
+
+      & p {
+        line-height: 1.625;
+      }
+    }
+  }
+
   .logo-padding {
     padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
       clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
@@ -119,5 +184,12 @@ header {
 
   #mobile-popover-menu:popover-open {
     display: none;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
   }
 }
