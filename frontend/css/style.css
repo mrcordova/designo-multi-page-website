@@ -39,11 +39,6 @@ header {
   display: flex;
   flex-direction: column;
 
-  padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem);
-
-  padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
-    clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
-
   & nav {
     display: flex;
     align-items: center;
@@ -58,6 +53,7 @@ header {
 #mobile-popover-menu:popover-open {
   border: 0;
   padding: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -66,9 +62,17 @@ header {
   height: 1.6875rem;
 }
 
+.logo-padding {
+  padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem);
+
+  padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
+    clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
+}
+
 .popover-header {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 @media (min-width: 48rem) {
@@ -80,10 +84,14 @@ header {
     display: none;
   }
 
-  header {
+  .logo-padding {
     padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
       clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
 
     padding-block-end: clamp(4rem, calc(3.786rem + 0.446vw), 4.188rem);
+  }
+
+  #mobile-popover-menu:popover-open {
+    display: none;
   }
 }
