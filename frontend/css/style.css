@@ -147,7 +147,17 @@ header {
   align-items: stretch;
   justify-content: space-between;
 }
-
+@media (max-width: 23.375rem) {
+  .hero-section {
+    & img {
+      margin-inline: auto;
+      /* max-width: 100%; */
+      width: 100%;
+      margin-block-start: 0;
+      /* margin-block-end: -10rem; */
+    }
+  }
+}
 @media (min-width: 48rem) {
   #desktop-menu {
     display: flex;
@@ -200,5 +210,21 @@ header {
   .hero-section {
     flex-direction: row;
     text-align: left;
+    max-height: 40rem;
+
+    & .hero-text {
+      align-items: flex-start;
+      padding-block-start: clamp(3.75rem, calc(-2.321rem + 12.649vw), 9.063rem);
+      padding-inline: clamp(3.625rem, calc(0.982rem + 5.506vw), 5.938rem) 0;
+
+      & p {
+        padding-inline-end: 7.8rem;
+      }
+    }
+    & img {
+      margin-block-start: 0;
+      margin-block-end: -15rem;
+      margin-inline: -4rem;
+    }
   }
 }
