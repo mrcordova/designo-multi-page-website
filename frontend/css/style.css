@@ -92,10 +92,11 @@ header {
   & img {
     width: 35.8125rem;
 
-    margin-inline: -6.5rem;
+    margin-inline: clamp(-6.5rem, calc(-17.473rem + 46.819vw), 5rem);
+    /* margin-inline: 0; */
     max-width: none;
 
-    margin-block-start: -4.5rem;
+    margin-block-start: clamp(-4.5rem, calc(-5.931rem + 6.107vw), -3rem);
   }
 }
 
@@ -164,6 +165,10 @@ header {
   }
 
   .hero-section {
+    margin-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
+      clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
+    border-radius: 0.9375rem;
+
     & .hero-text {
       & h1 {
         line-height: 1;
@@ -172,6 +177,10 @@ header {
       & p {
         line-height: 1.625;
       }
+    }
+
+    & img {
+      margin-inline: auto;
     }
   }
 
