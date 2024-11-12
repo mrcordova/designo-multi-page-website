@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --peach: rgb(231, 129, 107);
-  --black: rgb(29, 28, 30);
-  --white: rgb(255, 255, 255);
-  --light-peach: rgb(255, 173, 155);
-  --dark-grey: rgb(51, 49, 54);
-  --light-grey: rgb(241, 243, 245);
+  --peach: #e7816b;
+  --black: #1d1c1e;
+  --white: #ffffff;
+  --light-peach: #ffad9b;
+  --dark-grey: #333136;
+  --light-grey: #f1f3f5;
 }
 
 .jost-regular {
@@ -56,6 +56,25 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  & menu {
+    padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem);
+    padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    list-style: none;
+    line-height: 1.04;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+
+  &::backdrop {
+    background-color: hsl(from var(--black) h s l / 0.5);
+  }
 }
 
 .logo {
