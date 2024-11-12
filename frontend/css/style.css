@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --peach: rgb(231, 129, 107);
+  --black: rgb(29, 28, 30);
+  --white: rgb(255, 255, 255);
+  --light-peach: rgb(255, 173, 155);
+  --dark-grey: rgb(51, 49, 54);
+  --light-grey: rgb(241, 243, 245);
+}
+
+.jost-regular {
+  font-family: "Jost", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.jost-medium {
+  font-family: "Jost", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
