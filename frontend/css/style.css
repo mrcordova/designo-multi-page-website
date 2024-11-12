@@ -97,6 +97,13 @@ header {
 @media (min-width: 48rem) {
   #desktop-menu {
     display: flex;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    gap: 2.625rem;
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: 0.125rem;
   }
 
   #hamburger {
