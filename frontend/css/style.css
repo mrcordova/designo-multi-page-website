@@ -37,6 +37,22 @@ header {
   display: none;
 }
 
+#mobile-popover-menu:popover-open {
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 1.6875rem;
+}
+
+.popover-header {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 48rem) {
   #desktop-menu {
     display: flex;

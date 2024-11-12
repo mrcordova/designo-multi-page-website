@@ -18,24 +18,32 @@
     <header>
       <nav>
         <img
+          class="logo"
           src="./assets/shared/desktop/logo-dark.png"
           alt="logo for designo" />
-        <img
-          id="hamburger"
-          src="./assets/shared/mobile/icon-hamburger.svg"
-          alt="hamburger icon" />
+        <button popovertarget="mobile-popover-menu" popovertargetaction="show">
+          <img
+            id="hamburger"
+            src="./assets/shared/mobile/icon-hamburger.svg"
+            alt="hamburger icon" />
+        </button>
         <menu id="desktop-menu">
           <li>Our Company</li>
           <li>Locations</li>
           <li>Contact</li>
         </menu>
       </nav>
-      <div popover id="mobile-popover-menu">
-        <div>
+      <div popover="manuel" id="mobile-popover-menu">
+        <div class="popover-header">
           <img
+            class="logo"
             src="./assets/shared/desktop/logo-dark.png"
             alt="logo for designo" />
-          <img src="./assets/shared/mobile/icon-close.svg" alt="X" />
+          <button
+            popovertarget="mobile-popover-menu"
+            popovertargetaction="hide">
+            <img src="./assets/shared/mobile/icon-close.svg" alt="X" />
+          </button>
         </div>
         <menu>
           <li>Our Company</li>
