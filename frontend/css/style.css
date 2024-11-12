@@ -21,3 +21,14 @@
   font-weight: 500;
   font-style: normal;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  & nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
