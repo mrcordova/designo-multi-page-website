@@ -54,6 +54,8 @@ header {
   text-align: center;
   background-image: url(../assets/home/desktop/bg-pattern-hero-home.svg);
   background-repeat: no-repeat;
+  background-position: center left
+    clamp(0rem, calc(-9.542rem + 40.712vw), 10rem);
 
   max-height: 52.6875rem;
   overflow: hidden;
@@ -182,6 +184,9 @@ header {
     margin-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
       clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
     border-radius: 0.9375rem;
+    background-position: center left
+      clamp(10rem, calc(-12.857rem + 47.619vw), 30rem);
+    /* background-position: center left 30rem; */
 
     & .hero-text {
       & h1 {
