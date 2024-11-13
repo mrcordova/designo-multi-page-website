@@ -147,7 +147,38 @@ header {
   padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
     clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
 }
+.projects-section {
+  display: grid;
+  justify-items: center;
+  padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
+    clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
+  grid-template-areas:
+    "web"
+    "app"
+    "graphic";
+  text-align: center;
 
+  & .web-project {
+    display: grid;
+    grid-area: web;
+
+    & div {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
+    & picture {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
+  }
+  & .app-project {
+    grid-area: app;
+  }
+
+  & .graphic-project {
+    grid-area: graphic;
+  }
+}
 .popover-header {
   display: flex;
   align-items: stretch;
@@ -239,5 +270,11 @@ header {
       margin-block-end: -15rem;
       margin-inline: -4rem;
     }
+  }
+
+  .projects-section {
+    grid-template-areas:
+      "web app"
+      "web graphic";
   }
 }
