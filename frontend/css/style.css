@@ -233,6 +233,47 @@ header {
   align-items: stretch;
   justify-content: space-between;
 }
+.traits-section {
+  padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem)
+    clamp(1.5rem, calc(0.546rem + 4.071vw), 2.5rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: clamp(2rem, calc(7.863rem + -12.214vw), 5rem);
+
+  & .trait-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    & .trait-img-cont {
+      position: relative;
+      min-width: 12.625rem;
+      /* flex: 1; */
+      & .bg-img,
+      .bg-img-2,
+      .bg-img-3 {
+        position: absolute;
+        transform: rotate(260deg);
+        width: 12.625rem;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      & .bg-img-2 {
+        transform: rotate(180deg);
+      }
+      & .bg-img-3 {
+        transform: rotate(0deg);
+      }
+      & img {
+        margin: auto;
+      }
+    }
+  }
+}
 @media (max-width: 23.375rem) {
   .hero-section {
     & img {
@@ -303,6 +344,13 @@ header {
       }
     }
   }
+
+  .traits-section {
+    text-align: left;
+    & .trait-cont {
+      flex-direction: row;
+    }
+  }
 }
 
 @media (min-width: 90rem) {
@@ -335,5 +383,13 @@ header {
     grid-template-areas:
       "web app"
       "web graphic";
+  }
+
+  .traits-section {
+    text-align: center;
+    flex-direction: row;
+    & .trait-cont {
+      flex-direction: column;
+    }
   }
 }
