@@ -161,6 +161,7 @@ header {
   & .web-project {
     display: grid;
     grid-area: web;
+    align-items: center;
 
     & div {
       grid-row: 1 / -1;
@@ -172,11 +173,31 @@ header {
     }
   }
   & .app-project {
+    display: grid;
     grid-area: app;
+    align-items: center;
+    & div {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
+    & picture {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
   }
 
   & .graphic-project {
+    display: grid;
     grid-area: graphic;
+    align-items: center;
+    & div {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
+    & picture {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+    }
   }
 }
 .popover-header {
