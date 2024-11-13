@@ -59,25 +59,29 @@ header {
   overflow: hidden;
 
   & .hero-text {
-    padding-inline: clamp(1.5rem, calc(-0.528rem + 8.651vw), 3.625rem);
     padding-block-start: clamp(3.75rem, calc(6.193rem + -5.089vw), 5rem);
-    /* flex: 1; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.875rem;
+    gap: clamp(0.688rem, calc(1.054rem + -0.763vw), 0.875rem);
     & h1 {
+      padding-inline: clamp(1.5rem, calc(-0.528rem + 8.651vw), 3.625rem);
+
       font-size: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
       line-height: 1.125;
     }
 
     & p {
+      /* padding-inline: clamp(1.5rem, calc(-0.528rem + 8.651vw), 3.625rem); */
+      padding-inline: clamp(1.5rem, calc(-4.046rem + 23.664vw), 7.313rem);
+
       font-size: clamp(0.938rem, calc(0.878rem + 0.254vw), 1rem);
       line-height: 1.66;
     }
 
     & button {
-      margin-block-start: 0.625rem;
+      margin-block-start: clamp(0.625rem, calc(-0.508rem + 4.835vw), 1.813rem);
       text-transform: uppercase;
       font-size: 0.938rem;
       line-height: 1.46;
@@ -217,7 +221,11 @@ header {
       padding-block-start: clamp(3.75rem, calc(-2.321rem + 12.649vw), 9.063rem);
       padding-inline: clamp(3.625rem, calc(0.982rem + 5.506vw), 5.938rem) 0;
 
+      & h1 {
+        padding-inline-start: 0;
+      }
       & p {
+        padding-inline-start: 0;
         padding-inline-end: 7.8rem;
       }
     }
