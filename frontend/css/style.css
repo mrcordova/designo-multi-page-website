@@ -142,6 +142,7 @@ header {
 }
 
 footer {
+  margin-block-start: clamp(19.438rem, calc(18.245rem + 5.089vw), 20.688rem);
   position: relative;
   /* position: sticky; */
   /* bottom: 0; */
@@ -500,6 +501,9 @@ footer {
     }
   }
 }
+.projects-section.web-product-page {
+  padding-block-end: 0;
+}
 .popover-header {
   display: flex;
   align-items: stretch;
@@ -508,7 +512,7 @@ footer {
 .traits-section {
   padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem)
     clamp(1.5rem, calc(0.546rem + 4.071vw), 2.5rem);
-  padding-block-end: clamp(19.438rem, calc(18.245rem + 5.089vw), 20.688rem);
+  /* padding-block-end: clamp(19.438rem, calc(18.245rem + 5.089vw), 20.688rem); */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -811,14 +815,12 @@ footer {
       }
     }
   }
-  .projects-section,
-  :not(.product-page) {
+  .projects-section:not(.product-page) {
     grid-template-areas:
       "web app"
       "web graphic";
   }
-  .projects-section,
-  .web-product-page {
+  .projects-section.web-product-page {
     grid-template-areas: "app graphic";
   }
 
