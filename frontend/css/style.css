@@ -93,6 +93,13 @@ header {
       padding-inline: 1.5rem 1.568rem;
       padding-block: 1.125rem 1rem;
       border-radius: 0.5rem;
+      z-index: 99;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--light-peach);
+        color: var(--white);
+      }
     }
   }
   & img {
@@ -153,15 +160,24 @@ footer {
 
       /* width: 100%;
       height: 100%; */
-      background-image: url(../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg);
+      /* background-image: url(../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg); */
+      background-image: url(../assets/shared/desktop/bg-pattern-small-circle.svg);
       /* background-size: fill; */
-      background-size: 36.5rem;
-      background-position: right -10rem bottom 10rem;
-      transform: scale(1.5);
+      background-size: 18.25rem 18.25rem;
+      background-position: right clamp(0rem, calc(37.13rem + -77.354vw), 19rem)
+        bottom clamp(-5rem, calc(-19.313rem + 61.069vw), 10rem);
+      /* background-position: right 0rem bottom 10rem; */
+      transform: rotateY(180deg);
+      /* background-size: 54.75rem 36.5rem; */
+      /* background-position: right -0.5rem bottom 9.125rem; */
+      /* background-position: right 6rem bottom 9.125rem; */
+      /* transform: scale(2); */
       /* background-repeat: no-repeat; */
+      /* background-repeat: repeat-y; */
     }
 
     & .get-in-touch-info {
+      position: relative;
       gap: clamp(0.375rem, calc(0.136rem + 1.018vw), 0.625rem);
       display: flex;
       flex-direction: column;
@@ -188,6 +204,13 @@ footer {
       border-radius: 0.5rem;
       padding-inline: 1.125rem 1.188rem;
       padding-block: 1.063rem;
+      z-index: 99;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--light-peach);
+        color: var(--white);
+      }
     }
   }
 }
@@ -232,6 +255,11 @@ footer {
     display: flex;
     flex-direction: column;
     /* width: 100%; */
+
+    & button:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
   & .info {
     grid-area: info;
@@ -251,6 +279,15 @@ footer {
     display: flex;
     gap: 1rem;
     /* padding-block-start: clamp(1.938rem, calc(3.037rem + -2.29vw), 2.5rem); */
+
+    & svg {
+      color: var(--peach);
+
+      &:hover {
+        cursor: pointer;
+        color: var(--light-peach);
+      }
+    }
   }
 }
 #mobile-popover-menu:popover-open {
@@ -382,6 +419,11 @@ footer {
       gap: 1rem;
       justify-content: center;
     }
+
+    &:hover {
+      cursor: pointer;
+      background-color: hsl(from var(--peach) h s l / 0.8);
+    }
   }
 }
 .popover-header {
@@ -471,6 +513,10 @@ footer {
     font-size: 0.875rem;
     line-height: 1;
     letter-spacing: 0.125rem;
+    & li:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   footer {
