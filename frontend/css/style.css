@@ -359,6 +359,8 @@ footer {
   justify-content: center;
   padding-inline: clamp(1.5rem, calc(0.605rem + 3.817vw), 2.438rem)
     clamp(1.5rem, calc(0.546rem + 4.071vw), 2.5rem);
+  row-gap: clamp(2.5rem, calc(2.977rem + -2.036vw), 2rem);
+  column-gap: 1.875rem;
 
   & .product-cont {
     background-color: #fdf3f0;
@@ -370,6 +372,22 @@ footer {
     & img {
       border-top-left-radius: 0.9375rem;
       border-top-right-radius: 0.9375rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    & .product-info {
+      text-align: center;
+      padding-block: clamp(2rem, calc(-2.532rem + 19.338vw), 6.75rem);
+      padding-inline: clamp(1.869rem, calc(1.684rem + 0.789vw), 2.063rem)
+        clamp(1.819rem, calc(1.705rem + 0.483vw), 1.938rem);
+      & h2 {
+        text-transform: uppercase;
+        color: var(--peach);
+      }
+      & p {
+        color: var(--dark-grey);
+      }
     }
   }
 }
@@ -696,6 +714,10 @@ footer {
       }
       & .product-info {
         flex: 1;
+        /* padding-inline: 2rem 2.563rem; */
+        padding-inline: clamp(2.063rem, calc(2.134rem + -0.149vw), 2rem)
+          clamp(1.938rem, calc(1.866rem + 0.149vw), 2rem);
+        padding-block: clamp(2rem, calc(12.179rem + -11.31vw), 6.75rem);
       }
     }
   }
@@ -786,6 +808,16 @@ footer {
     flex-direction: row;
     & .trait-cont {
       flex-direction: column;
+    }
+  }
+
+  .products-section {
+    & .product-cont {
+      & img {
+        /* border-top-left-radius: 0.9375rem; */
+        border-top-right-radius: 0.9375rem;
+        border-bottom-left-radius: 0rem;
+      }
     }
   }
 }
