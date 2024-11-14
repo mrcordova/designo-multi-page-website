@@ -117,6 +117,30 @@ header {
   display: none;
 }
 
+.design-section {
+  color: var(--white);
+  text-align: center;
+  background-color: var(--peach);
+  background-image: url(../assets/web-design/desktop/bg-pattern-intro-web.svg);
+  background-repeat: no-repeat;
+  background-position: right
+    clamp(-18.5rem, calc(-26.611rem + 34.606vw), -10rem) bottom
+    clamp(0rem, calc(-23.855rem + 101.781vw), 25rem);
+  padding-block: clamp(4rem, calc(9.13rem + -10.687vw), 6.625rem);
+
+  & h1 {
+    font-size: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
+    line-height: 1.125;
+  }
+
+  & p {
+    font-size: clamp(0.938rem, calc(0.878rem + 0.254vw), 1rem);
+    line-height: 1.66;
+    margin-inline: auto;
+    max-width: 37ch;
+  }
+}
+
 footer {
   position: relative;
   /* position: sticky; */
@@ -494,6 +518,7 @@ footer {
     }
   }
 }
+
 @media (max-width: 23.375rem) {
   .hero-section {
     & img {
@@ -518,6 +543,20 @@ footer {
     & li:hover {
       cursor: pointer;
       text-decoration: underline;
+    }
+  }
+  .design-section {
+    margin-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
+      clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
+    border-radius: 0.5rem;
+    background-repeat: repeat;
+
+    & h1 {
+      line-height: 1;
+    }
+    & p {
+      line-height: 1.625;
+      max-width: 40ch;
     }
   }
 
