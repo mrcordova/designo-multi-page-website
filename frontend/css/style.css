@@ -362,7 +362,7 @@ footer {
   row-gap: clamp(2.5rem, calc(2.977rem + -2.036vw), 2rem);
   column-gap: 1.4rem;
 
-  padding-block: clamp(6rem, calc(4.569rem + 6.107vw), 7.5rem);
+  padding-block-start: clamp(6rem, calc(4.569rem + 6.107vw), 7.5rem);
 
   & .product-cont {
     background-color: #fdf3f0;
@@ -706,7 +706,7 @@ footer {
   .products-section {
     padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
       clamp(2.5rem, calc(-6.429rem + 18.601vw), 10.313rem);
-    padding-block: clamp(7.5rem, calc(4.643rem + 5.952vw), 10rem);
+    padding-block-start: clamp(7.5rem, calc(4.643rem + 5.952vw), 10rem);
 
     & .product-cont {
       display: flex;
@@ -805,12 +805,21 @@ footer {
     & .product-cont {
       display: flex;
       flex-direction: column;
+      & img {
+        border-top-right-radius: 0.9375rem;
+        border-bottom-left-radius: 0rem;
+      }
     }
   }
-  .projects-section {
+  .projects-section,
+  :not(.product-page) {
     grid-template-areas:
       "web app"
       "web graphic";
+  }
+  .projects-section,
+  .web-product-page {
+    grid-template-areas: "app graphic";
   }
 
   .traits-section {
@@ -818,16 +827,6 @@ footer {
     flex-direction: row;
     & .trait-cont {
       flex-direction: column;
-    }
-  }
-
-  .products-section {
-    & .product-cont {
-      & img {
-        /* border-top-left-radius: 0.9375rem; */
-        border-top-right-radius: 0.9375rem;
-        border-bottom-left-radius: 0rem;
-      }
     }
   }
 }
