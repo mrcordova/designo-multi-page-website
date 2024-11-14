@@ -198,9 +198,7 @@ footer {
   grid-template-areas:
     "logo"
     "directory"
-    "address"
-    "tel"
-    "links";
+    "info";
   padding-block: clamp(15.813rem, calc(21.001rem + -22.137vw), 10.375rem)
     clamp(4rem, calc(3.046rem + 4.071vw), 5rem);
 
@@ -235,16 +233,24 @@ footer {
     flex-direction: column;
     /* width: 100%; */
   }
-  & .address {
-    grid-area: address;
+  & .info {
+    grid-area: info;
+    padding-block-start: clamp(1.938rem, calc(3.037rem + -2.29vw), 2.5rem);
+    gap: clamp(1.938rem, calc(3.037rem + -2.29vw), 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & .address,
+  .tel {
+    opacity: 50%;
   }
 
-  & .tel {
-    grid-area: tel;
-  }
   & .links {
     grid-area: links;
     display: flex;
+    gap: 1rem;
+    /* padding-block-start: clamp(1.938rem, calc(3.037rem + -2.29vw), 2.5rem); */
   }
 }
 #mobile-popover-menu:popover-open {
@@ -494,7 +500,7 @@ footer {
     padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem);
     grid-template-areas:
       "logo logo directory"
-      "address tel links";
+      "info info info";
 
     & .footer-logo {
       /* border-bottom: 0; */
@@ -507,6 +513,20 @@ footer {
       border-bottom: 1px solid hsl(from var(--white) h s l / 0.1);
       flex-direction: row;
       width: 100%;
+    }
+    & .info {
+      flex-direction: row;
+      width: 100%;
+      align-items: flex-end;
+      gap: clamp(3.563rem, calc(-6.366rem + 20.685vw), 12.25rem);
+      text-align: left;
+      /* justify-content: space-between; */
+    }
+
+    & .links {
+      /* width: 100%; */
+
+      margin-inline-start: auto;
     }
   }
 
