@@ -119,6 +119,8 @@ header {
 
 footer {
   position: relative;
+  /* position: sticky; */
+  /* bottom: 0; */
   display: flex;
   flex-direction: column;
   background-color: var(--black);
@@ -520,7 +522,7 @@ footer {
   }
 
   footer {
-    position: relative;
+    /* position: relative; */
 
     & .get-in-touch-cont {
       margin-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
