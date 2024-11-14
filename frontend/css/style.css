@@ -504,6 +504,16 @@ footer {
 .projects-section.web-product-page {
   padding-block-end: 0;
 }
+.projects-section.app-product-page {
+  padding-block-end: 0;
+}
+
+.projects-section.graphic-product-page {
+  padding-block-end: 0;
+  grid-template-areas:
+    "app"
+    "web";
+}
 .popover-header {
   display: flex;
   align-items: stretch;
@@ -826,6 +836,9 @@ footer {
   }
   .projects-section.app-product-page {
     grid-template-areas: "web graphic";
+  }
+  .projects-section.graphic-product-page {
+    grid-template-areas: "app web";
   }
 
   .traits-section {

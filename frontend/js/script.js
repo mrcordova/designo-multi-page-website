@@ -3,6 +3,7 @@ const main = document.querySelector("main");
 const templates = {
   "web-design": await extractTemplate("web-design"),
   "app-design": await extractTemplate("app-design"),
+  "graphic-design": await extractTemplate("graphic-design"),
 };
 
 async function extractTemplate(id) {
@@ -17,6 +18,7 @@ main.addEventListener("click", (e) => {
   console.log(e.target);
 
   if (goToBtn) {
+    console.log(templates[goToBtn.dataset.goTo]);
     const clone = templates[goToBtn.dataset.goTo].content.cloneNode(true);
     main.replaceChildren(clone);
   }
