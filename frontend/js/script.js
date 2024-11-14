@@ -2,6 +2,7 @@ const parser = new DOMParser();
 const main = document.querySelector("main");
 const templates = {
   "web-design": await extractTemplate("web-design"),
+  "app-design": await extractTemplate("app-design"),
 };
 
 async function extractTemplate(id) {
@@ -13,6 +14,7 @@ async function extractTemplate(id) {
 main.addEventListener("click", (e) => {
   e.preventDefault();
   const goToBtn = e.target.closest("[data-go-to]");
+  console.log(e.target);
 
   if (goToBtn) {
     const clone = templates[goToBtn.dataset.goTo].content.cloneNode(true);

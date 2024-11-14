@@ -1,57 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
-
-  App design
-  Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.
-
-  Airfilter
-  Solving the problem of poor indoor air quality by filtering the air
-
-  Eyecam
-  Product that lets you edit your favorite photos and videos at any time
-
-  Faceit
-  Get to meet your favorite internet superstar with the faceit app
-
-  Todo
-  A todo app that features cloud sync with light and dark mode
-
-  Loopstudios
-  A VR experience app made for Loopstudios
-
-  Web Design
-  View Projects
-
-  Graphic Design
-  View Projects
-
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help
-  your business grow.
-  Get in touch
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
-</html>
+<template id="app-design-template">
+  <section class="design-section">
+    <h1 class="jost-medium">App Design</h1>
+    <p class="jost-regular">
+      Our mobile designs bring intuitive digital solutions to your customers
+      right at their fingertips.
+    </p>
+  </section>
+  <section class="products-section">
+    <div class="product-cont">
+      <div class="product-img-cont">
+        <img
+          src="./assets/app-design/desktop/image-airfilter.jpg"
+          alt="Airfiler image" />
+      </div>
+      <div class="product-info">
+        <h2 class="jost-medium">Airfiler</h2>
+        <p class="jost-regular">
+          Solving the problem of poor indoor air quality by filtering the air
+        </p>
+      </div>
+    </div>
+    <div class="product-cont">
+      <div class="product-img-cont">
+        <img
+          src="./assets/app-design/desktop/image-eyecam.jpg"
+          alt="eyecam image" />
+      </div>
+      <div class="product-info">
+        <h2 class="jost-medium">eyecam</h2>
+        <p class="jost-regular">
+          Product that lets you edit your favorite photos and videos at any time
+        </p>
+      </div>
+    </div>
+    <div class="product-cont">
+      <div class="product-img-cont">
+        <img
+          src="./assets/app-design/desktop/image-faceit.jpg"
+          alt="image-faceit" />
+      </div>
+      <div class="product-info">
+        <h2 class="jost-medium">faceit</h2>
+        <p class="jost-regular">
+          Get to meet your favorite internet superstar with the faceit app
+        </p>
+      </div>
+    </div>
+    <div class="product-cont">
+      <div class="product-img-cont">
+        <img
+          src="./assets/app-design/desktop/image-todo.jpg"
+          alt="todo image" />
+      </div>
+      <div class="product-info">
+        <h2 class="jost-medium">todo</h2>
+        <p class="jost-regular">
+          Connects users with local contractors based on their location
+        </p>
+      </div>
+    </div>
+    <div class="product-cont">
+      <div class="product-img-cont">
+        <img
+          src="./assets/app-design/desktop/image-loopstudios.jpg"
+          alt="loopstudios image" />
+      </div>
+      <div class="product-info">
+        <h2 class="jost-medium">loopstudios</h2>
+        <p class="jost-regular">A VR experience app made for Loopstudios</p>
+      </div>
+    </div>
+  </section>
+  <section class="projects-section app-product-page jost-medium">
+    <div class="web-project" data-go-to="web-design">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="./assets/home/desktop/image-web-design-small.jpg" />
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/home/tablet/image-web-design.jpg" />
+        <img src="./assets/home/mobile/image-web-design.jpg" alt="" />
+      </picture>
+      <div class="project-info">
+        <h2>web design</h2>
+        <div class="link-con">
+          <a href="./web-design.html">View projects</a>
+          <img
+            src="./assets/shared/desktop/icon-right-arrow.svg"
+            alt="right arrow" />
+        </div>
+      </div>
+    </div>
+    <div class="graphic-project" data-go-to="graphic-design">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="./assets/home/desktop/image-graphic-design.jpg" />
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/home/tablet/image-graphic-design.jpg" />
+        <img src="./assets/home/mobile/image-graphic-design.jpg" alt="" />
+      </picture>
+      <div class="project-info">
+        <h2>Graphic design</h2>
+        <div class="link-con">
+          <a href="./app-design.html">View projects</a>
+          <img
+            src="./assets/shared/desktop/icon-right-arrow.svg"
+            alt="right arrow" />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

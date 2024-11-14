@@ -614,7 +614,7 @@ footer {
 
   footer {
     /* position: relative; */
-
+    margin-block-start: clamp(20.688rem, calc(17.188rem + 7.292vw), 23.75rem);
     & .get-in-touch-cont {
       margin-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
         clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
@@ -750,7 +750,7 @@ footer {
     text-align: left;
     padding-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
       clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
-    padding-block-end: clamp(20.688rem, calc(17.188rem + 7.292vw), 23.75rem);
+    /* padding-block-end: clamp(20.688rem, calc(17.188rem + 7.292vw), 23.75rem); */
     & .trait-cont {
       flex-direction: row;
 
@@ -806,6 +806,7 @@ footer {
   }
 
   .products-section {
+    justify-content: flex-start;
     & .product-cont {
       display: flex;
       flex-direction: column;
@@ -822,6 +823,9 @@ footer {
   }
   .projects-section.web-product-page {
     grid-template-areas: "app graphic";
+  }
+  .projects-section.app-product-page {
+    grid-template-areas: "web graphic";
   }
 
   .traits-section {
