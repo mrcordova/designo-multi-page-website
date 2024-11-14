@@ -226,7 +226,7 @@ footer {
     line-height: 1;
 
     gap: clamp(2rem, calc(1.404rem + 2.545vw), 2.625rem);
-    padding-block-start: clamp(0rem, 3.9084rem + -8.1425vw, 2rem);
+    padding-block-start: 2rem;
     /* padding-block-start: clamp(0rem, calc(-1.908rem + 8.142vw), 2rem); */
     padding-block-end: clamp(0rem, calc(-2.385rem + 10.178vw), 2.5rem);
     display: flex;
@@ -511,6 +511,7 @@ footer {
     }
     & .directory-cont {
       border-bottom: 1px solid hsl(from var(--white) h s l / 0.1);
+      padding-block-start: 0rem;
       flex-direction: row;
       width: 100%;
     }
