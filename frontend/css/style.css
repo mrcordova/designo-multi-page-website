@@ -396,6 +396,42 @@ footer {
   padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
     clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
 }
+.locations-cont {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, calc(-2.271rem + 20.356vw), 7.5rem);
+}
+.location-cont {
+  display: flex;
+  flex-direction: column;
+
+  & .location-info {
+    background-color: #fdf3f0;
+    border-radius: 0.9375rem;
+    gap: 1.5rem;
+    flex: 1;
+    display: grid;
+    grid-template-areas:
+      "title"
+      "addy"
+      "tel";
+    text-align: center;
+
+    & .title {
+      grid-area: title;
+    }
+    & .addy {
+      grid-area: addy;
+    }
+    & .tel {
+      grid-area: tel;
+    }
+  }
+
+  & img {
+    width: 100%;
+  }
+}
 .locations-section {
   justify-content: space-between;
   padding-block-start: 7.5rem;
@@ -835,6 +871,25 @@ footer {
       margin-inline: auto;
     }
   }
+  .locations-cont {
+    gap: clamp(2rem, calc(13.786rem + -13.095vw), 7.5rem);
+  }
+  .location-cont {
+    gap: clamp(1.938rem, calc(2.009rem + -0.149vw), 1.875rem);
+    padding-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
+      clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
+
+    & .location-info {
+      grid-template-areas:
+        "title ."
+        "addy tel";
+      text-align: left;
+    }
+
+    & img {
+      border-radius: 0.9375rem;
+    }
+  }
   .locations-section {
     padding-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
       clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
@@ -991,6 +1046,15 @@ footer {
     }
   }
 
+  .location-cont {
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row;
+    }
+  }
   .locations-section {
     flex-direction: row;
   }
