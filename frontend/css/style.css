@@ -671,6 +671,11 @@ footer {
         padding-block: 1.125rem 1rem;
         padding-inline: 1.094rem 1.156rem;
         align-self: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--light-peach);
+        }
       }
     }
   }
@@ -1002,6 +1007,7 @@ footer {
     }
     /* text-align: left; */
   }
+
   .products-section {
     justify-content: flex-start;
     & .product-cont {
@@ -1026,6 +1032,16 @@ footer {
   }
   .projects-section.graphic-product-page {
     grid-template-areas: "app web";
+  }
+  .the-real-deal-section {
+    flex-direction: row-reverse;
+
+    & img {
+      border-top-left-radius: 0rem;
+      border-bottom-left-radius: 0rem;
+      border-top-right-radius: 0.9375rem;
+      border-bottom-right-radius: 0.9375rem;
+    }
   }
 
   .traits-section:not(.locations-section) {
