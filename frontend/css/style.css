@@ -146,8 +146,10 @@ header {
   color: var(--white);
   text-align: center;
   background-color: var(--peach);
-  background-image: url(../assets/web-design/desktop/bg-pattern-intro-web.svg);
+  background-image: url(../assets/shared/desktop/bg-pattern-small-circle.svg);
   background-repeat: no-repeat;
+  background-position: right bottom 15rem;
+  background-size: 21rem;
 
   & h1 {
     font-size: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
@@ -667,6 +669,8 @@ footer {
     /* border-radius: 0.5rem; */
     border-radius: 0.9375rem;
     /* background-repeat: repeat; */
+    background-position: right 15rem bottom 5rem;
+    background-size: 31rem;
 
     & h1 {
       line-height: 1;
@@ -844,6 +848,7 @@ footer {
     text-align: left;
     gap: 5.125rem;
 
+    background-position: left;
     & .about-info {
       max-width: 60ch;
     }
