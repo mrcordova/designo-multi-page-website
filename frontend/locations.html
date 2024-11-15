@@ -1,60 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
-
-  Canada
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact
-  P : +1 253-863-8967
-  M : contact@designo.co
-
-  Australia
-  Designo AU Office
-  19 Balonne Street
-  New South Wales 2443
-
-  Contact
-  P : (02) 6720 9092
-  M : contact@designo.au
-
-  United Kingdom
-  Designo UK Office
-  13 Colorado Way
-  Rhyd-y-fro SA8 9GA
-
-  Contact
-  P : 078 3115 1400
-  M : contact@designo.uk
-
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can 
-  help your business grow.
-  Get in touch
-  
-  Our company
-  Locations
-  Contact
-  
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-  
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
-</html>
+<template id="locations-template">
+  <div class="locations-cont">
+    <div class="location-cont">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="./assets/locations/desktop/image-map-canada.png" />
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/locations/tablet/image-map-canada.png" />
+        <img
+          src="./assets/locations/desktop/image-map-canada.png"
+          alt="map of canada" />
+      </picture>
+      <div>
+        <p class="jost-medium">Canada</p>
+        <div class="jost-regular">
+          <p>Designo Central Office</p>
+          <address>
+            <p>3886 Wellington Street</p>
+            <p>Toronto, Ontario M9C 3J5</p>
+          </address>
+        </div>
+        <div class="jost-regular">
+          <p>Contact</p>
+          <address>
+            <p>P : +1 253-863-8967</p>
+            <p>M : contact@designo.co</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="location-cont">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="./assets/locations/desktop/image-map-australia.png" />
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/locations/tablet/image-map-australia.png" />
+        <img
+          src="./assets/locations/desktop/image-map-australia.png"
+          alt="map of australia" />
+      </picture>
+      <div>
+        <p class="jost-medium">australia</p>
+        <div class="jost-regular">
+          <p>Designo AU Office</p>
+          <address>
+            <p>19 Balonne Streett</p>
+            <p>New South Wales 2443</p>
+          </address>
+        </div>
+        <div class="jost-regular">
+          <p>Contact</p>
+          <address>
+            <p>P : (02) 6720 9092</p>
+            <p>M : contact@designo.au</p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="location-cont">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="./assets/locations/desktop/image-map-united-kingdom.png" />
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/locations/tablet/image-map-united-kingdom.png" />
+        <img
+          src="./assets/locations/desktop/image-map-united-kingdom.png"
+          alt="map of united-kingdom" />
+      </picture>
+      <div>
+        <p class="jost-medium">united-kingdom</p>
+        <div class="jost-regular">
+          <p>Designo UK Office</p>
+          <address>
+            <p>13 Colorado Way</p>
+            <p>Rhyd-y-fro SA8 9GA</p>
+          </address>
+        </div>
+        <div class="jost-regular">
+          <p>Contact</p>
+          <address>
+            <p>P : 078 3115 1400</p>
+            <p>M : contact@designo.uk</p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
