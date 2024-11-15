@@ -21,6 +21,12 @@
   font-weight: 500;
   font-style: normal;
 }
+.jost-bold {
+  font-family: "Jost", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 html {
   height: 100%;
@@ -406,6 +412,8 @@ footer {
   flex-direction: column;
 
   & .location-info {
+    background-image: url(../assets/shared/desktop/bg-pattern-two-circles.svg);
+    /* background-repeat: no-repeat; */
     background-color: #fdf3f0;
     border-radius: 0.9375rem;
     padding-block: clamp(5rem, calc(4.523rem + 2.036vw), 5.5rem);
@@ -431,6 +439,15 @@ footer {
     }
     & .tel {
       grid-area: tel;
+    }
+
+    & .addy,
+    .tel {
+      font-size: clamp(0.938rem, calc(0.878rem + 0.254vw), 1rem);
+      color: var(--dark-grey);
+    }
+    & address {
+      font-style: normal;
     }
   }
 
