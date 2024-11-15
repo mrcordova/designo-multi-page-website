@@ -408,6 +408,8 @@ footer {
   & .location-info {
     background-color: #fdf3f0;
     border-radius: 0.9375rem;
+    padding-block: clamp(5rem, calc(4.523rem + 2.036vw), 5.5rem);
+    padding-inline: clamp(1.5rem, calc(-1.542rem + 12.977vw), 4.688rem);
     gap: 1.5rem;
     flex: 1;
     display: grid;
@@ -419,6 +421,10 @@ footer {
 
     & .title {
       grid-area: title;
+      font-size: clamp(2rem, calc(1.523rem + 2.036vw), 2.5rem);
+      color: var(--peach);
+      line-height: 1.125;
+      text-transform: capitalize;
     }
     & .addy {
       grid-area: addy;
@@ -884,6 +890,11 @@ footer {
         "title ."
         "addy tel";
       text-align: left;
+      padding-inline: clamp(4.688rem, calc(3.259rem + 2.976vw), 5.938rem);
+
+      & .title {
+        line-height: 1.2;
+      }
     }
 
     & img {
