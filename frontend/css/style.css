@@ -140,6 +140,46 @@ header {
     max-width: 37ch;
   }
 }
+.design-about-section {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--peach);
+  background-image: url(../assets/web-design/desktop/bg-pattern-intro-web.svg);
+  background-repeat: no-repeat;
+
+  & h1 {
+    font-size: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
+    line-height: 1.125;
+    /* max-width: 37ch; */
+  }
+
+  & p {
+    font-size: clamp(0.938rem, calc(0.878rem + 0.254vw), 1rem);
+    line-height: 1.66;
+    margin-inline: auto;
+    max-width: 37ch;
+  }
+
+  & .about-info {
+    padding-block: clamp(4rem, calc(5.954rem + -4.071vw), 5rem);
+    flex: 1;
+  }
+
+  & img {
+    /* object-fit: cover; */
+    width: 100%;
+    /* height: 100%; */
+    /* margin-inline: auto; */
+  }
+
+  & picture {
+    /* object-fit: cover;
+    width: 100%;
+    height: 100%; */
+  }
+}
 
 footer {
   margin-block-start: clamp(19.438rem, calc(18.245rem + 5.089vw), 20.688rem);
@@ -621,6 +661,31 @@ footer {
       max-width: 40ch;
     }
   }
+  .design-about-section {
+    margin-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
+      clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
+    /* border-radius: 0.5rem; */
+    border-radius: 0.9375rem;
+    /* background-repeat: repeat; */
+
+    & h1 {
+      line-height: 1;
+    }
+    & p {
+      line-height: 1.625;
+
+      max-width: 60ch;
+      /* max-width: 40ch; */
+    }
+
+    & .about-info {
+      padding-block: clamp(4rem, calc(-1.071rem + 10.565vw), 8.438rem);
+    }
+    & img {
+      border-top-left-radius: 0.9375rem;
+      border-top-right-radius: 0.9375rem;
+    }
+  }
 
   footer {
     /* position: relative; */
@@ -774,6 +839,20 @@ footer {
 }
 
 @media (min-width: 90rem) {
+  .design-about-section {
+    flex-direction: row-reverse;
+    text-align: left;
+    gap: 5.125rem;
+
+    & .about-info {
+      max-width: 60ch;
+    }
+    & img {
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0.9375rem;
+      border-bottom-right-radius: 0.9375rem;
+    }
+  }
   footer {
     & .get-in-touch-cont {
       align-items: center;

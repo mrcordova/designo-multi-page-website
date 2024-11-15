@@ -29,9 +29,9 @@
             alt="hamburger icon" />
         </button>
         <menu id="desktop-menu">
-          <li>Our Company</li>
-          <li>Locations</li>
-          <li>Contact</li>
+          <li><button data-go-to="about">Our Company</button></li>
+          <li><button data-go-to="locations">Locations</button></li>
+          <li><button data-go-to="contact">Contact</button></li>
         </menu>
       </nav>
       <div popover="manual" id="mobile-popover-menu">
@@ -47,15 +47,9 @@
           </button>
         </div>
         <menu>
-          <li>
-            <button>Our Company</button>
-          </li>
-          <li>
-            <button>Locations</button>
-          </li>
-          <li>
-            <button>Contact</button>
-          </li>
+          <li><button data-go-to="about">Our Company</button></li>
+          <li><button data-go-to="locations">Locations</button></li>
+          <li><button data-go-to="contact">Contact</button></li>
         </menu>
       </div>
     </header>
@@ -207,7 +201,7 @@
             how our expertise can help your business grow.
           </p>
         </div>
-        <button class="jost-medium">Get in touch</button>
+        <button class="jost-medium" data-go-to="contact">Get in touch</button>
       </div>
       <div class="footer-info jost-regular">
         <div class="footer-logo">
