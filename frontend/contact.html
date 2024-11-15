@@ -1,48 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
-
-  Contact us
-  Ready to take it to the next level? Let’s talk about your project or idea and find out how 
-  we can help your business grow. If you are looking for unique digital experiences that’s 
-  relatable to your users, drop us a line.
-
-  Name
-  Email address
-  Phone
-  Your message
-  Submit
-
-  Canada
-  See location
-
-  Australia
-  See location
-
-  United Kingdom
-  See location
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
-</html>
+<template id="contact-template">
+  <section class="design-section">
+    <div class="contact-info">
+      <h1 class="jost-medium">Contact Us</h1>
+      <p class="jost-regular">
+        Ready to take it to the next level? Let’s talk about your project or
+        idea and find out how we can help your business grow. If you are looking
+        for unique digital experiences that’s relatable to your users, drop us a
+        line.
+      </p>
+    </div>
+    <form class="contact-form jost-medium">
+      <label>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <span class="hide">
+          can't be empty
+          <img src="./assets/contact/desktop/icon-error.svg" alt="error" />
+        </span>
+      </label>
+      <label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address" />
+        <span class="hide">
+          can't be empty
+          <img src="./assets/contact/desktop/icon-error.svg" alt="error" />
+        </span>
+      </label>
+      <label>
+        <input type="tel" name="phone" id="phone" placeholder="Phone" />
+        <span class="hide">
+          can't be empty
+          <img src="./assets/contact/desktop/icon-error.svg" alt="error" />
+        </span>
+      </label>
+      <label>
+        <textarea
+          height="102"
+          name="message"
+          id="message"
+          placeholder="Your Message"></textarea>
+        <span class="hide">
+          can't be empty
+          <img src="./assets/contact/desktop/icon-error.svg" alt="error" />
+        </span>
+      </label>
+      <button class="jost-medium">Submit</button>
+    </form>
+  </section>
+  <section class="traits-section locations-section">
+    <div class="trait-cont">
+      <div class="trait-img-cont">
+        <img
+          class="bg-img"
+          src="./assets/shared/desktop/bg-pattern-small-circle.svg"
+          alt="" />
+        <img
+          src="./assets/shared/desktop/illustration-canada.svg"
+          alt="image of canadian city" />
+      </div>
+      <div class="trait-info jost-medium">
+        <h2>Canada</h2>
+        <button data-go-to="locations">See location</button>
+      </div>
+    </div>
+    <div class="trait-cont">
+      <div class="trait-img-cont">
+        <img
+          class="bg-img-2"
+          src="./assets/shared/desktop/bg-pattern-small-circle.svg"
+          alt="" />
+        <img
+          src="./assets/shared/desktop/illustration-australia.svg"
+          alt="building in australia" />
+      </div>
+      <div class="trait-info jost-medium">
+        <h2>australia</h2>
+        <button data-go-to="locations">See location</button>
+      </div>
+    </div>
+    <div class="trait-cont">
+      <div class="trait-img-cont">
+        <img
+          class="bg-img-3"
+          src="./assets/shared/desktop/bg-pattern-small-circle.svg"
+          alt="" />
+        <img
+          src="./assets/shared/desktop/illustration-united-kingdom.svg"
+          alt="bridge in london" />
+      </div>
+      <div class="trait-info jost-medium">
+        <h2>United kingdom</h2>
+        <button data-go-to="locations">See location</button>
+      </div>
+    </div>
+  </section>
+</template>
