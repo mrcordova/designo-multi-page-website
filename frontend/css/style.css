@@ -630,16 +630,18 @@ footer {
         clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
 
       padding-block: clamp(3.563rem, calc(2.491rem + 2.232vw), 4.5rem);
-      gap: clamp(0.625rem, calc(0.482rem + 0.298vw), 0.75rem);
+      /* gap: clamp(0.625rem, calc(0.482rem + 0.298vw), 0.75rem); */
 
       top: clamp(-16.5rem, calc(-19.643rem + 6.548vw), -13.75rem);
 
       & h3 {
         line-height: 1;
+        width: 11ch;
       }
 
       & p {
         line-height: 1.625;
+        width: 45ch;
       }
     }
   }
