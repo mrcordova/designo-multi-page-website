@@ -396,6 +396,10 @@ footer {
   padding-block: clamp(2.188rem, calc(0.458rem + 7.379vw), 4rem)
     clamp(2.125rem, calc(0.336rem + 7.634vw), 4rem);
 }
+.locations-section {
+  justify-content: space-between;
+  padding-block-start: 7.5rem;
+}
 .products-section {
   display: flex;
   flex-wrap: wrap;
@@ -643,7 +647,8 @@ footer {
     & .trait-info {
       display: flex;
       flex-direction: column;
-      gap: clamp(1rem, calc(2.954rem + -4.071vw), 2rem);
+      /* gap: clamp(1rem, calc(2.954rem + -4.071vw), 2rem); */
+      gap: clamp(2rem, calc(1.046rem + 4.071vw), 3rem);
       color: var(--dark-grey);
 
       & h2 {
@@ -656,6 +661,16 @@ footer {
       & p {
         font-size: 1rem;
         line-height: 1.625;
+      }
+
+      & button {
+        background-color: var(--peach);
+        text-transform: uppercase;
+        color: var(--white);
+        border-radius: 0.5rem;
+        padding-block: 1.125rem 1rem;
+        padding-inline: 1.094rem 1.156rem;
+        align-self: center;
       }
     }
   }
@@ -815,7 +830,14 @@ footer {
       margin-inline: auto;
     }
   }
-
+  .locations-section {
+    padding-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
+      clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
+    padding-block-start: clamp(7.5rem, calc(4.643rem + 5.952vw), 10rem);
+    & .trait-cont {
+      flex-direction: column;
+    }
+  }
   .logo-padding {
     padding-inline: clamp(2.438rem, calc(-6.562rem + 18.75vw), 10.313rem)
       clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem);
@@ -890,7 +912,7 @@ footer {
     }
   }
 
-  .traits-section {
+  .traits-section:not(.locations-section) {
     text-align: left;
     padding-inline: clamp(2.438rem, calc(-6.491rem + 18.601vw), 10.25rem)
       clamp(2.5rem, calc(-6.357rem + 18.452vw), 10.25rem);
@@ -899,7 +921,7 @@ footer {
       flex-direction: row;
 
       & .trait-info {
-        gap: clamp(1rem, calc(-0.143rem + 2.381vw), 2rem);
+        gap: clamp(2rem, calc(4.143rem + -2.381vw), 3rem);
       }
     }
   }
@@ -964,6 +986,9 @@ footer {
     }
   }
 
+  .locations-section {
+    flex-direction: row;
+  }
   .reasons-section {
     flex-direction: row;
 
@@ -1003,7 +1028,7 @@ footer {
     grid-template-areas: "app web";
   }
 
-  .traits-section {
+  .traits-section:not(.locations-section) {
     text-align: center;
     flex-direction: row;
     & .trait-cont {
