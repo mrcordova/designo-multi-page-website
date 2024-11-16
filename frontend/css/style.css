@@ -1236,16 +1236,16 @@ button:has(.logo):hover {
   .locations-section {
     flex-direction: row;
   }
-  main:not(:has(.contact-info, .locations-cont)) {
+  body:not(:has(.contact-info, .locations-cont)) {
     background-image: url(../assets/shared/desktop/bg-pattern-leaf.svg);
     background-repeat: no-repeat;
     background-position: left top 20rem;
   }
-  main:has(.hero-section) {
+  body:has(.hero-section) {
     background-image: url(../assets/shared/desktop/bg-pattern-leaf.svg),
       url(../assets/shared/desktop/bg-pattern-leaf.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: left top 20rem, right bottom -4.625rem;
+    background-position: left top 20rem, right bottom -84rem;
   }
   .reasons-section {
     flex-direction: row;
