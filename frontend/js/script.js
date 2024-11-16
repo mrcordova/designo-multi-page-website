@@ -9,6 +9,7 @@ const templates = {
   about: await extractTemplate("about"),
   locations: await extractTemplate("locations"),
   contact: await extractTemplate("contact"),
+  home: await extractTemplate("home"),
 };
 
 async function extractTemplate(id) {

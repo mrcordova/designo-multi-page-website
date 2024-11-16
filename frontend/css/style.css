@@ -414,6 +414,10 @@ footer {
       width: 12.625rem;
       margin: auto;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   & .directory-cont {
     grid-area: directory;
@@ -497,7 +501,9 @@ main:has(.contact-info) + footer {
     background-color: hsl(from var(--black) h s l / 0.5);
   }
 }
-
+button:has(.logo):hover {
+  cursor: pointer;
+}
 .logo {
   height: 1.6875rem;
 }
