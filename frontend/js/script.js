@@ -23,9 +23,32 @@ const callback = (mutationList, observer) => {
         .querySelector('[data-page="contact"]')
         .querySelector("form.contact-form");
       const contactInputs = contactForm.querySelectorAll("input, textarea");
+      const submitBtn = contactForm.querySelector("button");
       for (const contactInput of contactInputs) {
         contactInput.addEventListener("input", checkIfEmpty);
       }
+
+      submitBtn.addEventListener("click", (e) => {
+        for (const contactInput of contactInputs) {
+          if (
+            contactInput.validity.valueMissing ||
+            (contactInput.value == "" && contactInput.id != "phone")
+          ) {
+            // console.log(contactInput.validity);
+            contactInput.nextElementSibling.classList.remove("hide");
+            // console.log(contactInput);
+          } else if (contactInput.validity.patternMismatch) {
+            contactInput.reportValidity();
+          }
+        }
+        // console.log(contactForm.checkValidity());
+        if (contactForm.checkValidity()) {
+          for (const contactInput of contactInputs) {
+            contactInput.value = "";
+          }
+          //   alert("Message sent!");
+        }
+      });
     }
   }
 };
