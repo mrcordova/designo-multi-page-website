@@ -460,6 +460,13 @@ footer {
     }
   }
 }
+main:has(.contact-info) + footer {
+  margin-block-start: 7.5rem;
+
+  & > .get-in-touch-cont {
+    display: none;
+  }
+}
 #mobile-popover-menu:popover-open {
   border: 0;
   padding: 0;
@@ -987,7 +994,9 @@ footer {
       margin-inline-start: auto;
     }
   }
-
+  main:has(.contact-info) + footer {
+    margin-block-start: clamp(7.5rem, calc(4.643rem + 5.952vw), 10rem);
+  }
   #hamburger {
     display: none;
   }
