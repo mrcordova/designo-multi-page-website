@@ -34,19 +34,15 @@ const callback = (mutationList, observer) => {
             contactInput.validity.valueMissing ||
             (contactInput.value == "" && contactInput.id != "phone")
           ) {
-            // console.log(contactInput.validity);
             contactInput.nextElementSibling.classList.remove("hide");
-            // console.log(contactInput);
           } else if (contactInput.validity.patternMismatch) {
             contactInput.reportValidity();
           }
         }
-        // console.log(contactForm.checkValidity());
         if (contactForm.checkValidity()) {
           for (const contactInput of contactInputs) {
             contactInput.value = "";
           }
-          //   alert("Message sent!");
         }
       });
     }
@@ -74,7 +70,6 @@ body.addEventListener("click", (e) => {
   const popoverBtn = e.target.closest("[popovertarget]");
 
   if (goToBtn) {
-    // console.log(templates[goToBtn.dataset.goTo]);
     const clone = templates[goToBtn.dataset.goTo].content.cloneNode(true);
     main.replaceChildren(clone);
   } else if (popoverBtn) {
